@@ -1,0 +1,172 @@
+.grid-container {
+    width: 300px;
+
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    border-radius: 0.75rem;
+}
+
+/* if the price is less then zeor then the border grid border color is red otherwise the border color is green */
+
+.grid-container:hover {
+    border-color: var(--green);
+    transition: all 0.3s;
+}
+
+/* when the price is less than zero */
+
+.grid-container-red:hover {
+    border-color: var(--red);
+    transition: all 0.3s;
+}
+
+.info-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+
+.img-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.name-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.coin-symbol {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+}
+
+.coin-name {
+    text-transform: capitalize;
+    color: var(--grey);
+    margin: 0;
+    font-size: 1rem;
+}
+
+.chip-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+
+.chip-price {
+    border: 2px solid var(--green);
+    border-radius: 2rem;
+    padding: 0.5rem 1.25rem;
+    text-align: center;
+    font-weight: 600px;
+    color: var(--green);
+    font-size: 1rem;
+}
+
+.chip-price:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.chip-red {
+    border: 2px solid var(--red) !important;
+    color: var(--red) !important;
+}
+
+/* when we click on the icon which is going downward according to the market */
+
+
+.icon-chip {
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--green);
+    font-size: 1rem;
+}
+
+.icon-chip:hover {
+    background-color: var(--green);
+    color: var(--white)
+}
+
+.chip-red:hover {
+    background-color: var(--red);
+    color: var(--white) !important;
+}
+
+
+/* this code for the price in the grid content. */
+
+.info-container {
+    margin: 1.5rem;
+}
+
+.info-container .coin-price {
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* this price-red is work when the price is <0 means in negative then the text color is red as we see the UI */
+.price-red {
+    color: var(--red) !important;
+}
+
+.total-volume {
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.market-cap {
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.watchlist-icon {
+    padding: 0.5rem;
+    display: block;
+    color: var(--green);
+    font-size: 2rem !important;
+    margin-left: auto;
+    border: 2px solid var(--green);
+    border-radius: 3rem;
+    font-weight: 600;
+}
+
+.watchlist-icon:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.watchlist-icon-red {
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+.watchlist-icon-red:hover {
+    background-color: var(--red) !important;
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.watchlist-logo {
+    position: relative;
+    left: 35px;
+}

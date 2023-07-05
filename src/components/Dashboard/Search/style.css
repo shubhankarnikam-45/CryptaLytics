@@ -1,0 +1,27 @@
+.search-bar {
+    display: flex;
+    flex-direction: start;
+    width: 78%;
+    background-color: var(--darkgrey);
+    color: var(--grey);
+    font-family: 'inter';
+    margin: auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+input {
+    width: 100%;
+    background-color: var(--darkgrey);
+    border: none;
+    color: var(--grey);
+    font-size: 1.4rem;
+}
+
+/* when we hover on the serach bar */
+input:focus {
+    outline: none;
+
+
+
+}

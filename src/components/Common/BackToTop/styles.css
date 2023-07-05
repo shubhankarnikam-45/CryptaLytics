@@ -1,0 +1,13 @@
+.back-to-top {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.9rem;
+    width: 2.9rem;
+    bottom: 1.5rem;
+    right: 0;
+    margin: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--blue);
+}

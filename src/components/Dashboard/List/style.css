@@ -1,0 +1,94 @@
+.list-items{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+}
+
+
+.list-items td{
+    text-align: left;
+    width: 18%;
+}
+
+
+/* when the price of coin goes in negative then the text color should RED otherwise the text color is GREEN */
+
+
+/* after hover on the .list-item the background color is dark gray */
+
+.list-items:hover{
+    background-color: var(--darkgrey);
+    border-radius: 1.5rem;
+}
+/* this for the image align at left */
+.info-flex{
+    
+}
+
+/* this for the sysbol and name of bitcoin align at the left */
+
+.name-col{
+
+}
+
+/* for the icon which change after 24 hour. */
+.chip-flex{
+    text-align: center;
+    width: 18%;
+}
+
+/* here we align the item at right for better UI */
+/* .total-volume{
+    text-align: right;
+}
+
+.market-cap{
+    text-align: right;
+    width: 18%;
+} */
+
+
+.coin-price{
+    text-align: center;
+    width: 18%;
+    color: var(--green);
+}
+
+/* market cap and total volume is alined at right */
+.td-right-align{
+    text-align: right !important;
+   
+}
+
+/* the price of coin is aliged at center */
+.td-center-align{
+    text-align: center !important   ;
+   
+}
+
+
+@media screen and (max-width: 1100px) {
+    .icon-chip{
+        display: none !important;
+    }
+    .list-items{
+        gap:0rem;
+    }
+    .total-volume{
+        display: none;
+    }
+}
+/* when screen is desktop then the all mobile view market cap is display none */
+.mobile-view{
+    display: none;
+}
+/* when the size of screen below 800 px then the market cap showing in the short from for example 1000k ,1000B */
+@media screen and (max-width: 800px) {
+    .desktop-view{
+        display: none;
+    }
+    .mobile-view{
+        display: block;
+    }
+}
