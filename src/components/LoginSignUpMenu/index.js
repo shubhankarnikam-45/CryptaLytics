@@ -170,12 +170,12 @@ const LoginSignUpMenu = () => {
                     {value === 0 && <LoginForm handleClose={handleClose} setLoginDisable={setLoginDisable} />}
                     {value === 1 && <SignupForm handleClose={handleClose} />}
 
-                    <Box>
+                    {/* <Box>
                         <span>OR</span>
                         <GoogleButton style={{ width: "88%", margin: 'auto', marginTop: "13px" }}
                             onClick={handleGoogleAuthClick}
                         />
-                    </Box>
+                    </Box> */}
                 </div>
             </Modal>
         </div >

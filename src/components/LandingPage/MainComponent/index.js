@@ -35,7 +35,7 @@ function MainComponent() {
           </Link>
 
           {/* <Button text={"Dashboard"} /> */}
-          <Button text={"Shared"} outlined={true} />
+          {/* <Button text={"Shared"} outlined={true} /> */}
         </motion.div>
       </div>
       <div className='right-container'>

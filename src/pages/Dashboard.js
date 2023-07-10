@@ -72,7 +72,6 @@ const DashboardPage = () => {
             <Search search={search} onChange={onChange} />
             <TabsComponent coins={search[0] ? resultArr : resultantArrOfPagination} />
             <PaginationComponent pageNumber={pageNumber} onChangePage={onChangePage} />
-
           </div >
         )
       }
