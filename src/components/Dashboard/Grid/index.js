@@ -20,14 +20,20 @@ import { doc, setDoc, onSnapshot } from '@firebase/firestore';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 function Grid({ coin, isWatchListPage }) {
+
+    console.log("is watch list page", isWatchListPage);
+
+    //here coin store the current coin.
     console.log("Coins in the grid", coin)
     // const { uid } = auth.currentUser;
     const [user, loading] = useAuthState(auth);
 
     //getting watchlist using context.
     const { watchlist } = useTestMode();
+
+
     console.log("wactch list", watchlist)
-    console.log("coin", coin)
+
 
     function hasbeenAdded(id) {
         console.log("id", id)
@@ -41,6 +47,8 @@ function Grid({ coin, isWatchListPage }) {
 
         return false;
     }
+
+
     const [added, setAdded] = useState(hasbeenAdded(coin.id));
 
     console.log("addddd", added)
@@ -70,10 +78,10 @@ function Grid({ coin, isWatchListPage }) {
             });
 
 
-            alert("successfully added in watchlist")
+            toast.success("successfully added in watchlist")
         }
         catch (error) {
-            alert("not added in watchlist")
+            toast.error("not added in watchlist")
 
         }
 
@@ -104,10 +112,10 @@ function Grid({ coin, isWatchListPage }) {
             );
 
 
-            alert("removed from watchlist")
+            toast.success("removed from watchlist")
         }
         catch (error) {
-            alert("not removed from watchlist")
+            alert.error("not removed from watchlist")
 
         }
 

@@ -163,7 +163,8 @@
 .watchlist-icon-red:hover {
     background-color: var(--red) !important;
     color: var(--white);
-    transition: all 0.3s;
+    transition: all 0.1s;
+
 }
 
 .watchlist-logo {

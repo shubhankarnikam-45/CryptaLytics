@@ -5,8 +5,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const WatchListContext = createContext();
 
 
+//solving error in the watchlist page.
 export const WatchListContextProvider = ({ children }) => {
     // const { uid } = auth.currentUser();
+    // ~);
+
+    //loading and user
     const [user, loading] = useAuthState(auth);
 
     const [watchlist, setWatchlist] = useState([]);

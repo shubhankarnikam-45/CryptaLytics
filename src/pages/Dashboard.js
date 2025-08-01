@@ -12,7 +12,7 @@ import BackToTop from '../components/Common/BackToTop'
 const DashboardPage = () => {
   const [coins, setCoins] = useState([]);
 
-  console.log("coins", coins)
+  // console.log("coins", coins)
   //creating state for the search bar in `grid` and `list` view.
   const [search, setSearch] = useState([]);
 
@@ -29,26 +29,33 @@ const DashboardPage = () => {
 
 
   //creating onchange function which triggered when pagination function render.
+  //when we click on the button.
   const onChangePage = (e, v) => {
-    //something.
     setPageNumber(v)
+
+    //here we use the formula. { (9-1) * 10 , (9-1) * 10 +10 } ==>80 to 90
     setResultantArrOfPagination(coins.slice(((v - 1) * 10), (v - 1) * 10 + 10))
-    console.log(resultantArrOfPagination)
+
   }
+
+
   //creating change function for the search bar.
   const onChange = (value) => {
     setSearch(value)
   }
 
-  console.log(search[0])
+  
   const resultArr = coins.filter((item) => item.name.toLowerCase().includes(search) || item.symbol.toLowerCase().includes(search));
 
   useEffect(() => {
-    console.log("In use effect.")
+    // console.log("In use effect.")
     axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
       .then((res) => {
-        console.log("res", res);
+        // console.log("res", res);
+
+        //here we get the array of object.
         setCoins(res.data);
+
         setResultantArrOfPagination(res.data.slice(0, 10))
         //make load state to false.
         setLoading(false);

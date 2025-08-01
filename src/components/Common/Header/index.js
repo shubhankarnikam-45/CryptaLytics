@@ -30,7 +30,7 @@ function Header() {
         </Link>
 
 
-        <Link to="dashboard">
+        <Link to="/dashboard">
           <Button text={"Dashboard"} />
         </Link>
 

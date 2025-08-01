@@ -7,6 +7,8 @@ import 'firebase/compat/firestore';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+//optimize the firebase resources
 const firebaseConfig = {
     apiKey: "AIzaSyAzgjVXq8DMClZi2mcpnVCZG_xY7y6biRY",
     authDomain: "crypto-419cd.firebaseapp.com",

@@ -3,6 +3,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+
 import Grid from '../Grid';
 import "./style.css"
 import List from '../List';
@@ -12,7 +13,8 @@ export default function TabsComponent({ coins, isWatchListPage }) {
   // console.log("cois in the tabls component", coins)
   // console.log("in tabls compoent", watchlist)
   const [value, setValue] = useState('grid');
-  console.log("coins in table", coins)
+
+  console.log("coins in table", coins);
   //DATABASE: 
   // const resultRef = db.collection("Result");
   const handleChange = (event, newValue) => {
@@ -32,6 +34,7 @@ export default function TabsComponent({ coins, isWatchListPage }) {
   return (
     <div>
       <TabContext value={value}>
+
         <div>
           <TabList onChange={handleChange} variant="fullWidth">
             <Tab label="Grid" value="grid" sx={style} />
@@ -50,6 +53,8 @@ export default function TabsComponent({ coins, isWatchListPage }) {
             }
           </div>
         </TabPanel>
+
+
         <TabPanel value="list">
 
           <table className='list-flex'>
@@ -60,6 +65,8 @@ export default function TabsComponent({ coins, isWatchListPage }) {
             }
           </table>
         </TabPanel>
+
+
       </TabContext>
     </div>
   );

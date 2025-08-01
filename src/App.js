@@ -4,15 +4,18 @@ import './App.css';
 import HomePage from './pages/Home';
 import DashboardPage from './pages/Dashboard';
 import CoinPage from './pages/Coin';
-import LoginSignUpMenu from './components/LoginSignUpMenu';
 import WatchListPage from './pages/WatchListPage';
 import EmailaKnowledgement from './components/EmailAknowledgement';
+import { ToastContainer } from 'react-toastify';
+import LoginSignUpMenu from './components/LoginSignUpMenu';
+
 
 
 
 function App() {
   return (
     <div className="App">
+       <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />

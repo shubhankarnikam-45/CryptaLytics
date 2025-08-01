@@ -28,7 +28,7 @@ const LoginForm = ({ handleClose, setLoginDisable }) => {
         auth.signInWithEmailAndPassword(email, password).then((res) => {
             //when user is login in successfully then.
             //momdal is colse.
-            alert("Login Sucessful")
+         
 
             handleClose();
             setLoginDisable(true);
@@ -47,7 +47,7 @@ const LoginForm = ({ handleClose, setLoginDisable }) => {
         })
             .catch((err) => {
                 // console.log("Ef")
-                alert(errorMapping[err.code] || "some error occured");
+              
                 toast.error(errorMapping[err.code] || "some error occured", {
                     position: "top-right",
                     autoClose: 5000,
